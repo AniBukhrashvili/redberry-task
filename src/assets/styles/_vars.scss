@@ -30,6 +30,8 @@
 
   //Font Family
   --font-family: firago;
+  --font-family-medium: firago-medium;
+  --font-family-bold: firago-bold;
 
   //Font Weights
   --font-weight-light: 300;
@@ -39,6 +41,11 @@
 
   //Border Radiuses
   --border-radius-xs: 10px;
+  --border-radius-sm: 14px;
+  --border-radius-md: 16px;
+
+  //Box Shadow
+  --box-shadow-sm: 5px 5px 12px 0px rgba(2, 21, 38, 0.08);
 
   //Transitions
   --transition-base: 0.3s ease;

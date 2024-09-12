@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 47px;
-  font-family: var(--font-family);
+  font-family: var(--font-family-medium);
   border: 1px solid transparent;
   border-radius: var(--border-radius-xs);
   background: transparent;
@@ -49,6 +49,5 @@
   &__Body {
     display: flex;
     font-size: var(--font-size-ui-16);
-    font-weight: var(--font-weight-semi-bold);
   }
 }

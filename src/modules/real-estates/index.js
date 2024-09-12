@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { realEstatesRequest } from "../../api/realEstates";
 import AppButton from "../../components/AppButton";
 import AppLayout from "../../layout/AppLayout";
+import AppRealEstateCard from "../../components/AppRealEstateCard";
 
 import styles from "./RealEstates.module.scss";
 
@@ -64,12 +65,39 @@ export default function RealEstates() {
         {realEstates.length === 0 ? (
           <p>აღნიშნული მონაცემებით განცხადება არ იძებნება</p>
         ) : (
-          realEstates.map((item, index) => (
-            <div key={index} className={styles.RealEstates__Listing}>
-              {/* render cards */}
-            </div>
-          ))
+          <div className={styles.RealEstates__Listing}>
+            {realEstates.map((item, index) => (
+              <div key={index}>
+                <AppRealEstateCard item={item} />
+              </div>
+            ))}
+          </div>
         )}
+      </div>
+      <div className={styles.RealEstates__Listing}>
+        <AppRealEstateCard
+          item={{
+            id: 1,
+            address: "შარტავას 2ა",
+            zip_code: "0101",
+            price: 100000,
+            area: 100.5,
+            bedrooms: 3,
+            is_rental: 0,
+            image:
+              "https://api.real-estate-manager.redberryinternship.ge/storage/agent_avatars/KXhmcUIaDo7TTkgfCBraeUhx3Nd6eTKrmsXOWkPh.png",
+            city_id: 1,
+            city: {
+              id: 1,
+              name: "სოხუმი",
+              region_id: 1,
+              region: {
+                id: 1,
+                name: "აფხაზეთი",
+              },
+            },
+          }}
+        />
       </div>
     </AppLayout>
   );

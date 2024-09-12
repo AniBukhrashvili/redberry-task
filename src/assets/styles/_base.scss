@@ -3,6 +3,16 @@
   src: url("../fonts/FiraGO-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: firago-medium;
+  src: url("../fonts/FiraGO-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: firago-bold;
+  src: url("../fonts/FiraGO-Bold.otf") format("opentype");
+}
+
 *,
 *:before,
 *:after {
@@ -15,7 +25,6 @@ body {
   font-size: var(--font-size-ui-16);
   font-weight: var(--font-weight-regular);
   font-family: var(--font-family);
-  line-height: 1.5;
   padding: 0;
   margin: 0;
 }
