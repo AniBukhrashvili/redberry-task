@@ -1,0 +1,9 @@
+.AppHeader {
+  padding: 38px 0;
+  border-bottom: 1px solid var(--color-gray-100);
+  &__Logo {
+    display: flex;
+    width: 150px;
+    height: 24px;
+  }
+}
