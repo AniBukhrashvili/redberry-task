@@ -1,0 +1,36 @@
+.RealEstates {
+  &__Top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__Filter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__Tags {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__Actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  p {
+    color: var(--color-additional-gray-o8);
+    font-size: var(--font-size-ui-20);
+    margin: 0;
+  }
+}
