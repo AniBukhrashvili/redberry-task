@@ -10,6 +10,7 @@
   --color-gray-100: #dbdbdb;
   --color-green-100: #45a849;
   --color-primary: #f93b1d;
+  --color-red-50: #df3014;
 
   --color-additional-gray-o8: rgba(2, 21, 38, 0.8);
   --color-additional-gray-o7: rgba(2, 21, 38, 0.7);
@@ -30,7 +31,14 @@
   //Font Weights
   --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-semi-bold: 500;
   --font-weight-bold: 700;
+
+  //Border Radiuses
+  --border-radius-xs: 10px;
+
+  //Transitions
+  --transition-base: 0.3s ease;
 
   //Container Sizes
   --container-padding-x: 16px;
