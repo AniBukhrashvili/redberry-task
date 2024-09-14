@@ -4,6 +4,15 @@
   justify-content: space-between;
   padding: var(--modal-header-padding);
 
+  &__Title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-gray-900);
+    font-size: var(--font-size-ui-32);
+    font-family: var(--font-family-medium);
+  }
+
   &__Close {
     display: flex;
     padding: 0;

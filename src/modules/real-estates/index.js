@@ -3,11 +3,13 @@ import { realEstatesRequest } from "../../api/realEstates";
 import AppButton from "../../components/AppButton";
 import AppLayout from "../../layout/AppLayout";
 import AppRealEstateCard from "../../components/AppRealEstateCard";
+import AddAgentModal from "../../components/AddAgentModal";
 
 import styles from "./RealEstates.module.scss";
 
 export default function RealEstates() {
   const [realEstates, setRealEstates] = useState([]);
+  const [showAgentModal, setShowAgentModal] = useState(false);
 
   useEffect(() => {
     realEstatesRequest().then((data) => setRealEstates(data));
@@ -43,6 +45,7 @@ export default function RealEstates() {
             </AppButton>
             <AppButton
               variant="secondary"
+              onClick={() => setShowAgentModal(true)}
               prefix={
                 <svg
                   width="22"
@@ -74,31 +77,12 @@ export default function RealEstates() {
           </div>
         )}
       </div>
-      <div className={styles.RealEstates__Listing}>
-        <AppRealEstateCard
-          item={{
-            id: 1,
-            address: "შარტავას 2ა",
-            zip_code: "0101",
-            price: 100000,
-            area: 100.5,
-            bedrooms: 3,
-            is_rental: 0,
-            image:
-              "https://api.real-estate-manager.redberryinternship.ge/storage/agent_avatars/KXhmcUIaDo7TTkgfCBraeUhx3Nd6eTKrmsXOWkPh.png",
-            city_id: 1,
-            city: {
-              id: 1,
-              name: "სოხუმი",
-              region_id: 1,
-              region: {
-                id: 1,
-                name: "აფხაზეთი",
-              },
-            },
-          }}
+      {showAgentModal && (
+        <AddAgentModal
+          showAgentModal={showAgentModal}
+          setShowAgentModal={setShowAgentModal}
         />
-      </div>
+      )}
     </AppLayout>
   );
 }

@@ -1,3 +1,6 @@
 .AppModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
   padding: var(--modal-actions-padding);
 }
