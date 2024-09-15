@@ -19,13 +19,17 @@
     &--Dashed {
       border: 1px dashed var(--color-gray-400);
     }
+
+    &--Error {
+      border: 1px solid var(--color-primary);
+    }
   }
 
   &__Icon {
     &::before {
       position: absolute;
       content: "";
-      background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 24 24%22 fill%3D%22none%22 stroke%3D%22%232D3648%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22%3E%3Ccircle cx%3D%2212%22 cy%3D%2212%22 r%3D%2210%22/%3E%3Cline x1%3D%228%22 y1%3D%2212%22 x2%3D%2216%22 y2%3D%2212%22/%3E%3Cline x1%3D%2212%22 y1%3D%228%22 x2%3D%2212%22 y2%3D%2216%22/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 24 24%22 fill%3D%22none%22 stroke%3D%22%232D3648%22 strokeWidth%3D%222%22 strokeLinecap%3D%22round%22 strokeLinejoin%3D%22round%22%3E%3Ccircle cx%3D%2212%22 cy%3D%2212%22 r%3D%2210%22/%3E%3Cline x1%3D%228%22 y1%3D%2212%22 x2%3D%2216%22 y2%3D%2212%22/%3E%3Cline x1%3D%2212%22 y1%3D%228%22 x2%3D%2212%22 y2%3D%2216%22/%3E%3C/svg%3E");
       background-size: contain;
       background-repeat: no-repeat;
       top: 50%;
@@ -97,6 +101,10 @@
       display: flex;
       align-items: center;
       margin: 0;
+    }
+
+    &--Error {
+      color: var(--color-primary);
     }
   }
 }

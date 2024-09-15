@@ -6,9 +6,9 @@ export default function AppRealEstateCard({ item }) {
       <a href="/">
         <figure>
           <img src={item.image} alt="Real Estate Card" />
-          <p className={styles.AppRealEstateCard__Badge}>
+          <span className={styles.AppRealEstateCard__Badge}>
             {item.isRental ? "ქირავდება" : "იყიდება"}
-          </p>
+          </span>
         </figure>
 
         <div className={styles.AppRealEstateCard__Content}>

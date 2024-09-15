@@ -11,8 +11,13 @@ export default function RealEstates() {
   const [realEstates, setRealEstates] = useState([]);
   const [showAgentModal, setShowAgentModal] = useState(false);
 
+  const fetchRealEstates = async () => {
+    const data = await realEstatesRequest();
+    setRealEstates(data);
+  };
+
   useEffect(() => {
-    realEstatesRequest().then((data) => setRealEstates(data));
+    fetchRealEstates();
   }, []);
 
   return (
