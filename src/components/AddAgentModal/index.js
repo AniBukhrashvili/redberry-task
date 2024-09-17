@@ -21,7 +21,7 @@ const validationSchema = Yup.object().shape({
     .matches(/@redberry\.ge$/, "გამოიყენეთ @redberry.ge ფოსტა")
     .required("ელ-ფოსტა აუცილებელია"),
   phone: Yup.string()
-    .matches(/^[0-9]+$/, "მხოლოდ რიცხვები")
+    .matches(/^5\d{8}$/, "მხოლოდ რიცხვები")
     .required("ტელეფონის ნომერი აუცილებელია"),
   avatar: Yup.mixed().required("ფოტოს ატვირთვა აუცილებელია"),
 });
@@ -123,6 +123,7 @@ export default function AddAgentModal({ showAgentModal, setShowAgentModal }) {
             />
             <AppInput
               label="ტელეფონის ნომერი"
+              type="number"
               name="phone"
               value={form.phone}
               onChange={(data) => handleChange("phone", data.target.value)}
