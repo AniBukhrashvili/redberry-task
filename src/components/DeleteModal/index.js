@@ -22,7 +22,11 @@ export default function DeleteModal({ showDeleteModal, setShowDeleteModal }) {
   };
 
   return (
-    <AppModal isVisible={showDeleteModal} className={styles.DeleteModal}>
+    <AppModal
+      isVisible={showDeleteModal}
+      onChange={() => setShowDeleteModal(!showDeleteModal)}
+      className={styles.DeleteModal}
+    >
       <AppModalContent>
         <div className={styles.DeleteModal__Content}>
           გსურთ წაშალოთ ლისტინგი?

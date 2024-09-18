@@ -90,7 +90,11 @@ export default function AddAgentModal({ showAgentModal, setShowAgentModal }) {
   };
 
   return (
-    <AppModal isVisible={showAgentModal} className={styles.AddAgentModal}>
+    <AppModal
+      isVisible={showAgentModal}
+      onChange={() => setShowAgentModal(!showAgentModal)}
+      className={styles.AddAgentModal}
+    >
       <AppModalHeader>აგენტის დამატება</AppModalHeader>
       <AppModalContent>
         <form onSubmit={onSubmit}>
