@@ -1,0 +1,10 @@
+.DeleteModal {
+  --modal-max-width: 624px;
+  --modal-actions-padding: 35px 0 58px;
+  --modal-content-padding: 58px 0 0;
+
+  &__Content {
+    font-size: var(--font-size-ui-20);
+    text-align: center;
+  }
+}

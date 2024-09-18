@@ -1,5 +1,5 @@
+import RealEstatePage from "../modules/real-estate";
+
 export default function RealEstate() {
-  return (
-    <div>Real Estate Page</div>
-  )
+  return <RealEstatePage />;
 }

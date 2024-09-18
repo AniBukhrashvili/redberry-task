@@ -3,4 +3,8 @@
   justify-content: flex-end;
   gap: 15px;
   padding: var(--modal-actions-padding);
+
+  &--Center {
+    justify-content: center;
+  }
 }

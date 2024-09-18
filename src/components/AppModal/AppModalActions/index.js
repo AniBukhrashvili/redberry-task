@@ -1,5 +1,15 @@
-import styles from './AppModalActions.module.scss';
+import classnames from "classnames";
 
-export default function AppModalActions({ children }) {
-  return <div className={styles.AppModalActions}>{children}</div>;
+import styles from "./AppModalActions.module.scss";
+
+export default function AppModalActions({ children, center }) {
+  return (
+    <div
+      className={classnames(styles.AppModalActions, {
+        [styles["AppModalActions--Center"]]: center,
+      })}
+    >
+      {children}
+    </div>
+  );
 }

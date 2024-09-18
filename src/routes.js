@@ -10,7 +10,7 @@ export const routes = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/real-estate",
+    path: "/real-estate/:id",
     element: <RealEstate />,
   },
   {
