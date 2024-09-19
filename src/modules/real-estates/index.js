@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { realEstatesRequest } from "../../api/realEstates";
 import AppButton from "../../components/AppButton";
 import AppLayout from "../../layout/AppLayout";
@@ -10,6 +11,7 @@ import styles from "./RealEstates.module.scss";
 export default function RealEstates() {
   const [realEstates, setRealEstates] = useState([]);
   const [showAgentModal, setShowAgentModal] = useState(false);
+  const navigate = useNavigate();
 
   const fetchRealEstates = async () => {
     const data = await realEstatesRequest();
@@ -31,6 +33,7 @@ export default function RealEstates() {
           <div className={styles.RealEstates__Actions}>
             <AppButton
               variant="primary"
+              onClick={() => navigate("/add-real-estate")}
               prefix={
                 <svg
                   width="22"

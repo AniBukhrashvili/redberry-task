@@ -1,0 +1,37 @@
+.AddRealEstate {
+  max-width: 790px;
+  width: 100%;
+  margin: 0 auto 90px;
+
+  h1 {
+    color: var(--color-gray-900);
+    font-size: var(--font-size-ui-32);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__Row {
+    margin-bottom: 70px;
+  }
+
+  &__RowTitle {
+    color: var(--color-gray-800);
+    font-size: var(--font-size-ui-16);
+    font-feature-settings: "case" on;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__Wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 22px;
+  }
+
+  &__Actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+}
