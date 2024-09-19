@@ -4,6 +4,7 @@ import AppInput from "../../components/AppInput";
 import AppButton from "../../components/AppButton";
 import AppTextarea from "../../components/AppTextarea";
 import AppSelect from "../../components/AppSelect";
+import AppRadio from "../../components/AppRadio";
 
 import styles from "./AddRealEstate.module.scss";
 
@@ -41,8 +42,8 @@ export default function AddRealEstate() {
           <div className={styles.AddRealEstate__Row}>
             <div className={styles.AddRealEstate__RowTitle}>გარიგების ტიპი</div>
             <div className={styles.AddRealEstate__Wrapper}>
-              <AppInput label="იყიდება"></AppInput>
-              <AppInput label="ქირავდება"></AppInput>
+              <AppRadio checked>იყიდება</AppRadio>
+              <AppRadio>ქირავდება</AppRadio>
             </div>
           </div>
           <div className={styles.AddRealEstate__Row}>

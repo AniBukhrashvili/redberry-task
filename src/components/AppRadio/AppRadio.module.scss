@@ -1,0 +1,36 @@
+.AppRadio {
+  position: relative;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  border: 1px solid var(--color-gray-400);
+  border-radius: 100%;
+  background-color: var(--color-white);
+  cursor: pointer;
+
+  &--Checked {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: var(--color-black);
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__Title {
+    color: var(--color-gray-700);
+    padding-left: 24px;
+  }
+
+  &__Input {
+    display: none;
+  }
+}
