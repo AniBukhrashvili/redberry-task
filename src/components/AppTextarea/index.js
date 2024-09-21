@@ -18,7 +18,11 @@ export default function AppTextarea({
         {label}
         {required && "*"}
       </label>
-      <div className={styles.AppTextarea__Wrapper}>
+      <div
+        className={classnames(styles.AppTextarea__Wrapper, {
+          [styles["AppTextarea__Wrapper--Error"]]: error,
+        })}
+      >
         <textarea
           className={styles.AppTextarea__Textarea}
           name={name}

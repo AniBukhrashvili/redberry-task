@@ -5,7 +5,7 @@
   height: 18px;
   align-items: center;
   border: 1px solid var(--color-gray-400);
-  border-radius: 100%;
+  border-radius: var(--border-radius-half);
   background-color: var(--color-white);
   cursor: pointer;
 
@@ -14,13 +14,13 @@
 
     &:after {
       position: absolute;
+      content: "";
       top: 50%;
       left: 50%;
       width: 8px;
       height: 8px;
-      border-radius: 100%;
+      border-radius: var(--border-radius-half);
       background-color: var(--color-black);
-      content: "";
       transform: translate(-50%, -50%);
     }
   }

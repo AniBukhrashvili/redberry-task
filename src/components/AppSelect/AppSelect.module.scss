@@ -45,10 +45,29 @@
       transform: rotate(180deg);
     }
   }
+
+  &__HelperText {
+    display: flex;
+    gap: 4px;
+    color: var(--color-gray-900);
+    font-size: var(--font-size-ui-14);
+    margin-top: 8px;
+
+    p {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    &--Error {
+      color: var(--color-primary);
+    }
+  }
 }
 
 .AppSelectDropdown {
   position: absolute;
+  top: 62px;
   width: 100%;
   display: flex;
   gap: 8px;
@@ -56,7 +75,6 @@
   border: 1px solid var(--color-gray-400);
   border-radius: var(--border-radius-2xs);
   background-color: var(--color-white);
-  margin-top: 2px;
   z-index: 2000;
 
   &__Empty {
@@ -66,7 +84,7 @@
   }
 
   &__Content {
-    max-height: 168px;
+    max-height: 180px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -74,6 +92,9 @@
 }
 
 .AppSelectDropdownOption {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   width: 100%;
   padding: 12px;
   border: none;
@@ -82,6 +103,17 @@
   cursor: pointer;
   outline: 0;
   text-align: left;
+
+  color: var(--color-gray-900);
+  font-size: 14px;
+  line-height: normal;
+
+  &__Icon {
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+  }
 
   &:last-child {
     border-bottom: none;

@@ -37,6 +37,7 @@ export default function AppInput({
           placeholder={placeholder}
           required={required}
           aria-label={name}
+          accept={type === "file" ? ".png, .jpg, .jpeg, .gif" : undefined}
         />
         {preview && (
           <div className={styles.AppInput__Preview}>

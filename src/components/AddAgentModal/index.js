@@ -23,7 +23,23 @@ const validationSchema = Yup.object().shape({
   phone: Yup.string()
     .matches(/^5\d{8}$/, "მხოლოდ რიცხვები")
     .required("ტელეფონის ნომერი აუცილებელია"),
-  avatar: Yup.mixed().required("ფოტოს ატვირთვა აუცილებელია"),
+  avatar: Yup.mixed()
+    .required("ფოტოს ატვირთვა აუცილებელია")
+    .test(
+      "fileType",
+      "მხოლოდ სურათის ფაილებია დასაშვები (JPEG, PNG, GIF, JPG)",
+      (value) => {
+        return (
+          value &&
+          ["image/jpeg", "image/png", "image/gif", "image/jpg"].includes(
+            value.type
+          )
+        );
+      }
+    )
+    .test("fileSize", "ფაილის ზომა არ უნდა აღემატებოდეს 1MB-ს", (value) => {
+      return value && value.size <= 1024 * 1024;
+    }),
 });
 
 export default function AddAgentModal({ showAgentModal, setShowAgentModal }) {

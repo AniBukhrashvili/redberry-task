@@ -27,8 +27,8 @@ export default function RealEstates() {
       <div className={styles.RealEstates}>
         <div className={styles.RealEstates__Top}>
           <div className={styles.RealEstates__Filter}>
-            filters
-            <div className={styles.RealEstates__Tags}>tags</div>
+            {/* filters
+            <div className={styles.RealEstates__Tags}>tags</div> */}
           </div>
           <div className={styles.RealEstates__Actions}>
             <AppButton

@@ -7,7 +7,7 @@ export default function AppRealEstateCard({ item }) {
         <figure>
           <img src={item.image} alt="Real Estate Card" />
           <span className={styles.AppRealEstateCard__Badge}>
-            {item.isRental ? "ქირავდება" : "იყიდება"}
+            {item.is_rental ? "ქირავდება" : "იყიდება"}
           </span>
         </figure>
 

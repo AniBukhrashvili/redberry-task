@@ -53,7 +53,7 @@ export default function RealEstate() {
           <div className={styles.RealEstate__Figure}>
             <img src={realEstate?.image} alt="Real Estate" />
             <span className={styles.RealEstate__Badge}>
-              {realEstate?.isRental ? "ქირავდება" : "იყიდება"}
+              {realEstate?.is_rental ? "ქირავდება" : "იყიდება"}
             </span>
             <div className={styles.RealEstate__Date}>
               გამოქვეყნების თარიღი: {formatDate(realEstate?.created_at)}
